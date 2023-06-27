@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="720.0" prefWidth="540.0" style="-fx-background-color: #003060;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.fxml1080729.shoppingCartController">
+   <children>
+      <GridPane layoutX="14.0" layoutY="535.0" maxHeight="-Infinity" prefHeight="50.0" prefWidth="465.0" AnchorPane.bottomAnchor="20.0" AnchorPane.leftAnchor="10.0" AnchorPane.rightAnchor="10.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+            <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#switchToOrder" style="-fx-background-color: #003060; -fx-border-color: ffffff; -fx-border-radius: 30;" text="order" textFill="WHITE">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="4.0" right="4.0" />
+               </GridPane.margin>
+            </Button>
+            <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" style="-fx-background-color: #003060; -fx-border-color: c4e1e1; -fx-border-radius: 30; -fx-border-width: 4;" text="shopping&#10;     Cart" textFill="WHITE" GridPane.columnIndex="1">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <GridPane.margin>
+                  <Insets left="4.0" right="4.0" />
+               </GridPane.margin>
+               <font>
+                  <Font size="13.0" />
+               </font>
+            </Button>
+            <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#switchToPrimary" style="-fx-background-color: #003060; -fx-border-color: ffffff; -fx-border-radius: 30;" text="front" textFill="WHITE" GridPane.columnIndex="2">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="4.0" right="4.0" />
+               </GridPane.margin>
+            </Button>
+            <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#switchToTask" style="-fx-background-color: #003060; -fx-border-color: #ffffff; -fx-border-radius: 30;" text="task" textFill="WHITE" GridPane.columnIndex="3">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="4.0" right="4.0" />
+               </GridPane.margin>
+            </Button>
+            <Button maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#switchToActivity" style="-fx-background-color: #003060; -fx-border-color: #ffffff; -fx-border-radius: 30;" text="activity" textFill="WHITE" GridPane.columnIndex="4">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+               <font>
+                  <Font size="15.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets left="4.0" right="4.0" />
+               </GridPane.margin>
+            </Button>
+         </children>
+      </GridPane>
+      <AnchorPane prefHeight="644.0" prefWidth="531.0" AnchorPane.bottomAnchor="75.0" AnchorPane.leftAnchor="5.0" AnchorPane.rightAnchor="5.0" AnchorPane.topAnchor="5.0">
+         <children>
+            <TableView fx:id="tableview" layoutX="14.0" layoutY="21.0" prefHeight="610.0" prefWidth="335.0" style="-fx-background-color: d2e9ff;" />
+            <Label fx:id="payLabel" layoutX="368.0" layoutY="523.0" prefHeight="42.0" prefWidth="106.0" style="-fx-background-color: #003060;" text="\$: xxx" textFill="WHITE" AnchorPane.rightAnchor="60.0">
+               <font>
+                  <Font size="27.0" />
+               </font>
+            </Label>
+            <Button layoutX="368.0" layoutY="576.0" mnemonicParsing="false" onAction="#submit" prefHeight="50.0" prefWidth="149.0" style="-fx-background-color: fff; -fx-font-weight: bold;" text="送出" AnchorPane.rightAnchor="15.0">
+               <font>
+                  <Font size="20.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Button layoutX="472.0" layoutY="523.0" mnemonicParsing="false" onAction="#getPayNum" prefHeight="42.0" prefWidth="44.0" style="-fx-background-color: e8e8d0; -fx-background-radius: 100;" text="cal" AnchorPane.rightAnchor="15.0">
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor></Button>
+         </children></AnchorPane>
+   </children>
+</AnchorPane>
